@@ -3,10 +3,15 @@ package org.step;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.pojoclass.Adactin_Pojo_Class;
 
@@ -131,18 +136,34 @@ public class Adactin_Hotel extends Adactin_Pojo_Class {
 	@And("click the book now button")
 	public void clickTheBookNowButton() {
 
-		clickButton(a.getBookNow());
+		driver.findElement(By.xpath("//input[@id='book_now']")).click();
 
-		WebElement orderId2 = a.getOrderId();
+	}
+
+	@When("user has to get the Order Id")
+	public void userHasToGetTheOrderId() {
+		
+		a = new Adactin_Pojo_Class();
+		
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(25, TimeUnit.SECONDS).pollingEvery(25, TimeUnit.MILLISECONDS).ignoring(Throwable.class);
+
+		WebElement myItinerary = driver.findElement(By.xpath("//input[@id='my_itinerary']"));
+		
+		JavascriptExecutor js =(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", myItinerary);
+		
+		WebElement orderId2 = driver.findElement(By.xpath("//input[@name='order_no']"));
+		
 		System.out.println("OrderId: " + orderId2.getAttribute("value"));
 
+		
 	}
 
+	@Then("user has to logout successfully")
+	public void userHasToLogoutSuccessfully() {
+		
+		WebElement logOut = driver.findElement(By.xpath("//input[@id='logout']"));
+		logOut.click();
+	}
 	
-	@Then("user has to get the order id")
-	public void userHasToGetTheOrderId() throws InterruptedException {
-
-		clickButton(a.getLogOut());
-
 	}
-}

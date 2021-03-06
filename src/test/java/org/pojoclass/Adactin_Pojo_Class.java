@@ -81,7 +81,7 @@ public class Adactin_Pojo_Class extends Base_Class {
 	@FindBy(id = "cc_cvv")
 	private WebElement cvv;
 
-	@FindBy(xpath="//input[@id='book_now']")
+	@FindBy(xpath="//input[@name='book_now']")
 	private WebElement bookNow;
 	
 	@FindBy(xpath="//input[@id='my_itinerary']")

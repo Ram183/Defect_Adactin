@@ -25,9 +25,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base_Class {
-	
+
 	public static WebDriver driver;
-	
+
 	public static Actions a;
 
 	public static void chromeBrowser(String url) {
@@ -40,7 +40,7 @@ public class Base_Class {
 
 		driver.manage().window().maximize();
 
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 	}
 
@@ -465,5 +465,10 @@ public class Base_Class {
 
 	}
 
+	public static void clear(WebElement element) {
+
+		element.clear();
+
+	}
 
 }

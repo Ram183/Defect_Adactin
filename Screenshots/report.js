@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/featurefile1/Adactin_Feature.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Featurefile2/Adactin_Feature.feature");
 formatter.feature({
   "name": "To Validate the Adactin Hotel Webpage",
   "description": "",
@@ -14,7 +14,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToLaunchTheGoogleChromeAndPassTheUrl()"
+  "location": "Steps_Definition_2_Dim_Map.userHasToLaunchTheGoogleChromeAndPassTheUrl()"
 });
 formatter.result({
   "status": "passed"
@@ -25,20 +25,32 @@ formatter.step({
     {
       "cells": [
         "username",
-        "Ramcrazy18"
+        "password"
       ]
     },
     {
       "cells": [
-        "password",
+        "Ramcrazy18",
         "Ram@123a"
+      ]
+    },
+    {
+      "cells": [
+        "priyasuresh221",
+        "supriya16"
+      ]
+    },
+    {
+      "cells": [
+        "saraasif1",
+        "saraasif"
       ]
     }
   ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToPassTheValidUsernameAndPassword(DataTable)"
+  "location": "Steps_Definition_2_Dim_Map.userHasToPassTheValidUsernameAndPassword(DataTable)"
 });
 formatter.result({
   "status": "passed"
@@ -48,7 +60,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToClickTheLoginButton()"
+  "location": "Steps_Definition_2_Dim_Map.userHasToClickTheLoginButton()"
 });
 formatter.result({
   "status": "passed"
@@ -59,56 +71,56 @@ formatter.step({
     {
       "cells": [
         "location",
-        "Adelaide"
-      ]
-    },
-    {
-      "cells": [
         "hotels",
-        "Hotel Hervey"
-      ]
-    },
-    {
-      "cells": [
         "roomtype",
-        "Super Deluxe"
-      ]
-    },
-    {
-      "cells": [
         "numberofrooms",
-        "3"
-      ]
-    },
-    {
-      "cells": [
         "checkindate",
-        "06/03/2021"
-      ]
-    },
-    {
-      "cells": [
         "checkoutdate",
-        "10/03/2021"
+        "adultsperroom",
+        "childrenperroom"
       ]
     },
     {
       "cells": [
-        "adultsperroom",
+        "Adelaide",
+        "Hotel Hervey",
+        "Super Deluxe",
+        "3",
+        "06/03/2021",
+        "10/03/2021",
+        "3",
+        "1"
+      ]
+    },
+    {
+      "cells": [
+        "New York",
+        "Hotel Sunshine",
+        "Standard",
+        "2",
+        "11/03/2021",
+        "14/03/2021",
+        "4",
         "3"
       ]
     },
     {
       "cells": [
-        "childrenperroom",
-        "1"
+        "Paris",
+        "Hotel Cornice",
+        "Double",
+        "4",
+        "23/03/2021",
+        "26/03/2021",
+        "2",
+        "4"
       ]
     }
   ],
   "keyword": "When "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToSelectTheSearchHotelPage(DataTable)"
+  "location": "Steps_Definition_2_Dim_Map.userHasToSelectTheSearchHotelPage(DataTable)"
 });
 formatter.result({
   "status": "passed"
@@ -118,7 +130,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToClickTheSearchButton()"
+  "location": "Steps_Definition_2_Dim_Map.userHasToClickTheSearchButton()"
 });
 formatter.result({
   "status": "passed"
@@ -128,7 +140,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToSelectTheRadioButtonAndClickContinueButton()"
+  "location": "Steps_Definition_2_Dim_Map.userHasToSelectTheRadioButtonAndClickContinueButton()"
 });
 formatter.result({
   "status": "passed"
@@ -139,56 +151,56 @@ formatter.step({
     {
       "cells": [
         "firstname",
-        "Ram"
-      ]
-    },
-    {
-      "cells": [
         "lastname",
-        "A"
-      ]
-    },
-    {
-      "cells": [
         "billing address",
-        "OMR,Chennai"
-      ]
-    },
-    {
-      "cells": [
         "credit card no",
-        "1234567890123456"
-      ]
-    },
-    {
-      "cells": [
         "credit card type",
-        "MAST"
-      ]
-    },
-    {
-      "cells": [
         "expiry month",
-        "10"
-      ]
-    },
-    {
-      "cells": [
         "expiry year",
-        "2022"
+        "cvv"
       ]
     },
     {
       "cells": [
-        "cvv",
+        "Ram",
+        "A",
+        "OMR,Chennai",
+        "1234567890123456",
+        "MAST",
+        "10",
+        "2022",
         "123"
+      ]
+    },
+    {
+      "cells": [
+        "priya",
+        "Suresh",
+        "OMR,Chennai",
+        "6543210987654321",
+        "AMEX",
+        "6",
+        "2021",
+        "456"
+      ]
+    },
+    {
+      "cells": [
+        "Sara",
+        "Asif",
+        "OMR,Chennai",
+        "9876543210852074",
+        "VISA",
+        "2",
+        "2021",
+        "789"
       ]
     }
   ],
   "keyword": "And "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToFillTheDetailsAndSubmitTheForm(DataTable)"
+  "location": "Steps_Definition_2_Dim_Map.userHasToFillTheDetailsAndSubmitTheForm(DataTable)"
 });
 formatter.result({
   "status": "passed"
@@ -198,7 +210,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Step_Definition_Class.userHasToGetTheOrderIdAndConformTheOrderGetPlacedSuccessfully()"
+  "location": "Steps_Definition_2_Dim_Map.userHasToGetTheOrderIdAndConformTheOrderGetPlacedSuccessfully()"
 });
 formatter.result({
   "status": "passed"

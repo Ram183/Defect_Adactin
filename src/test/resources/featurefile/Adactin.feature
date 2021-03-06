@@ -9,7 +9,7 @@ Feature: To validate the Adactin Hotel Login Functionality
 
   Scenario: To validate the Home Page Functionality
     When user has to select the options listed below
-      | Adelaide | Hotel Hervey | Super Deluxe | 3 | 28/02/2021 | 06/03/2021 | 3 | 1 |
+      | Adelaide | Hotel Hervey | Super Deluxe | 3 | 28/02/2021 | 05/03/2021 | 3 | 1 |
     And user has to click the search button
     Then user has to navigate to next page
 
@@ -22,4 +22,5 @@ Feature: To validate the Adactin Hotel Login Functionality
     When user has to fill all the details listed below
       | Ram | A | OMR,Chennai | 1234567890123456 | MAST | 10 | 2022 | 123 |
     And click the book now button
-    Then user has to get the order id
+    And user has to get the Order Id
+    Then user has to logout successfully
